@@ -139,3 +139,28 @@ a.custom-card:hover {
 .checked {
   color: orange;
 }
+
+
+
+span{
+  color: #fff;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+abbr .cerrarS{
+  width: 40px;
+  height: 40px;
+}
+
+#colorU{
+  background-image: url(https://besthqwallpapers.com/Uploads/1-2-2018/39056/thumb2-turquoise-abstraction-geometric-background-asbestos-lines-material-design.jpg);
+  background-size: cover ;
+}
+
+#principal{
+  background-image: url(../img/login.png);
+  background-size: 200px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
