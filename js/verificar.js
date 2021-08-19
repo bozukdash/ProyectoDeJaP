@@ -1,8 +1,8 @@
-let usuario = {};
+
 function verificarDatos() {
   let dato = document.getElementById("nombreUser");
   let dato2 = document.getElementById("contra");
-  usuario = {};
+  let usuario = {};
   var isChecked = document.getElementById("recordar").checked;
 
   if (isChecked) {//Recuerda el usuario
@@ -40,8 +40,20 @@ function verificarDatos() {
     
   }
   
+  function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+    });
+  }
+  function onLoad() {
+    gapi.load('auth2', function() {
+      gapi.auth2.init();
+    });
+  }
   
 function desconectar() {
+  signOut();
   localStorage.clear();
   sessionStorage.clear();
   location.href = "login.html";
