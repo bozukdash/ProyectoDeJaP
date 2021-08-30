@@ -164,3 +164,9 @@ abbr .cerrarS{
   background-repeat: no-repeat;
   background-position: center;
 }
+
+abbr .buscarS{
+  width: 25px;
+  height: 25px;
+}
+

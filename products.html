@@ -12,6 +12,7 @@
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
+    <link href="css/estilos2.css" rel="stylesheet">
     <script src="js/verificar.js"></script>
     <meta name="google-signin-scope" content="profile email" />
     <meta
@@ -20,6 +21,7 @@
     />
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
+
   </head>
   <body onload="cargarDatos();">
     <nav class="site-header sticky-top py-1 bg-dark">
@@ -37,12 +39,58 @@
       </div>
       </div>
     </nav>
+
+
     <div class="container p-5">
       <main role="main" class="pb-5">
         <div class="text-center p-4">
-            <h2>Listado</h2>
+            <h2>Listado de productos</h2>
         </div>
+
+        <div>
+          <input type="search" id="buscador"/> <button type="button" class=""><abbr title="Buscar"><img class="buscarS" src="https://static.vecteezy.com/system/resources/previews/000/442/725/non_2x/vector-find-icon.jpg" alt=""></abbr></button>
+        </div>
+        
+
+        <div class="row justify-content-end">
+          <div class="col-md-6"></div>
+            <div class="col-md-6 col-sm-12 mb-1 container">
+              <div class="row container p-0 m-0">
+                <div class="col">
+                  <p class="font-weight-normal text-right my-2"><span id="precioID">Precio: </span></p>
+                </div>
+                <div class="col">
+                  <input class="form-control" type="number" min="0" placeholder="min." id="rangeFilterCountMin">
+                </div>
+                <div class="col">
+                  <input class="form-control" type="number" min="0" placeholder="máx." id="rangeFilterCountMax">
+                </div>
+                <div class="col-3 p-0">
+                  <div class="btn-group" role="group">
+                    <button class="btn btn-dark btn-block" id="rangoFiltrado">Filtrar</button>
+                    <button class="btn btn-dark btn-sm" id="limpiarFiltro">Limpiar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <br>
         <div class="container">
+          <div class="col text-right">
+            <div class="btn-group btn-group-toggle mb-4" data-toggle="buttons">
+                <label class="btn btn-dark active" id="precioAscendente" >
+                    <input type="radio" name="options" autocomplete="off" checked><span>Ascendente</span>
+                </label>
+                <label class="btn btn-dark" id="precioDecreciente" >
+                    <input type="radio" name="options" autocomplete="off"><span>Descendente</span>
+                </label>
+                <label class="btn btn-dark" id="porRelevancia" >
+                    <input type="radio" name="options" autocomplete="off"><i class="fas fa-sort-amount-down mr-1"></i><span>Relevancia </span>
+                </label>
+            </div>
+        </div>
+    </div>
+    
             <div class="row">
                 <div class="list-group" id="cat-list-container" >
                 </div>

@@ -14,6 +14,7 @@ function onSignIn(googleUser) {
             
             usuario.nombre = profile.getName();
             usuario.estado = "conectado";
+            usuario.icono = profile.getImageUrl();
             usuario.conGoogle = true;
            
             localStorage.setItem("usuario", JSON.stringify(usuario));

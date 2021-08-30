@@ -1,0 +1,32 @@
+body{
+    background-image: url(../img/listaAuto.jpg);
+}
+
+h2{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSV6P4oASawbam5pxhw718QQHpTPbjdZbY-fg&usqp=CAU);
+    font-style: oblique;
+    color: rgb(10, 2, 88);
+    font-weight: bold;
+
+}
+
+span{
+    color: rgb(230, 230, 255);
+}
+
+#precioID{
+    color:rgb(0, 0, 0);
+    background-color: cornsilk;
+}
+
+#rangoFiltrado{
+    color: green;
+}
+
+#limpiarFiltro{
+    color: rgb(175, 14, 14);
+}
+
+#userLogeado{
+    color: mintcream;
+}
