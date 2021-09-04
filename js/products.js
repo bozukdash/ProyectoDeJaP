@@ -7,20 +7,27 @@ var arrayCondicional = [];
 var minCount = undefined;
 var maxCount = undefined;
 var listafiltrada = [];
+var autoExtra = {cost: 17850,currency:"USD",description:"Pese a sus compactas dimensiones, la inteligente distribución del espacio interior en el Kia Stonic pretende maximizar el confort para todos sus ocupantes.",imgSrc:"img/car5.jpg",name:"Kia Stonic",soldCount:85};
 
-function sortCategories(criterio, array){
+function ordenarProductos(criterio, array){
     let result = [];
     if (criterio === POR_PRECIO_ASC)
     {
         result = array.sort(function(a, b) {
-            if ( a.cost < b.cost ){ return -1; }
-            if ( a.cost > b.cost ){ return 1; }
+            let aCost = parseInt(a.cost);
+            let bCost = parseInt(b.cost);
+
+            if ( aCost < bCost ){ return -1; }
+            if ( aCost > bCost ){ return 1; }
             return 0;
         });
     }else if (criterio === POR_PRECIO_DESC){
         result = array.sort(function(a, b) {
-            if ( a.cost > b.cost ){ return -1; }
-            if ( a.cost < b.cost ){ return 1; }
+            let aCost = parseInt(a.cost);
+            let bCost = parseInt(b.cost);
+            
+            if ( aCost > bCost ){ return -1; }
+            if ( aCost < bCost ){ return 1; }
             return 0;
         });
     }else if (criterio === POR_RELEVANCIA){
@@ -37,8 +44,9 @@ function sortCategories(criterio, array){
     return result;
 }
 
-function showCategoriesList(){
+function mostrarProductos(){
     let htmlContentToAppend = "";
+    console.log(arrayActual);
     for(let i = 0; i < arrayActual.length; i++){
         let prod = arrayActual[i];
 
@@ -46,21 +54,25 @@ function showCategoriesList(){
             ((maxCount == undefined) || (maxCount != undefined && parseInt(prod.cost) <= maxCount))){
 
             htmlContentToAppend += `
-            <a href="product-info.html" class="list-group-item list-group-item-action">
+            <a href="product-info.html" class="list-group-item list-group-item-action bg-dark">
             <div class="row">
                 <div class="col-3">
                     <img src="` + prod.imgSrc + `" alt="" class="img-thumbnail">
                 </div>
                 <div class="col">
                     <div class="d-flex w-100 justify-content-between">
-                        <h4 class="mb-1">`+ prod.name +`</h4>
-                        <small class="text-muted">` + prod.soldCount + ` artículos</small>
+                        <h4 class="mb-6">`+ prod.name +`</h4>
+                        <small class="mb-6 text-muted">` + prod.soldCount + ` artículos</small>
                     </div>
-                    <div class="d-flex w-100 justify-content-between">
-                    <p class="mb-1">`+ prod.description +`</p>
-                    <small class="text-muted">` + prod.cost + ` USD</small>
+                    <div class="d-flex w-200 justify-content-between">
+                         <h4 class="mb-6"></h4>
+                         <h6 id="precioC">` + prod.cost + ` USD</h6>
+                    </div>
+                    <div>
+                     <p class="mb-6">`+ prod.description +`</p>
+                     </div>
                 </div>
-                </div>
+                
             </div>
         </a>
         `
@@ -68,41 +80,46 @@ function showCategoriesList(){
 
         document.getElementById("cat-list-container").innerHTML = htmlContentToAppend;
     }
+    if(arrayActual.length === 0){
+        document.getElementById("cat-list-container").innerHTML ="";
+    }
 }
 
-function sortAndShowCategories(sortCriteria, categoriesArray){
-    criterioDeOrdenamiento = sortCriteria;
+function sortAndShowProducts(modoDeOrden, categoriesArray){
+    criterioDeOrdenamiento = modoDeOrden;
 
     if(categoriesArray != undefined){
-        arrayActual = categoriesArray;
+        arrayActual = categoriesArray.concat(autoExtra);
     }
 
-    arrayActual = sortCategories(criterioDeOrdenamiento, arrayActual);
+    arrayActual = ordenarProductos(criterioDeOrdenamiento, arrayActual);
     arrayCondicional = arrayActual;
     //Muestro las categorías ordenadas
-    showCategoriesList();
+    mostrarProductos();
 }
 
 function verificacion() {
-    console.log(arrayActual);
     var textoEscrito = document.getElementById("buscador").value;
     var listafiltrada = arrayActual.filter(function(name) { //filter devuelve un nuevo array conteniendo los coincidentes
         return name.name.toLowerCase().indexOf(textoEscrito.toLowerCase()) > -1; //si lo escrito está en el array devuelve su posición
+        //si no lo está devuelve -1
+    })
+
+    var listafiltradaDescription = arrayActual.filter(function(description) { //filter devuelve un nuevo array conteniendo los coincidentes
+        return description.description.toLowerCase().indexOf(textoEscrito.toLowerCase()) > -1; //si lo escrito está en el array devuelve su posición
         //si no lo está devuelve -1
     })
     arrayActual = listafiltrada; //aqui le asigno el valor a la lista global
     if (textoEscrito.trim() === ""){
         arrayActual = arrayCondicional; // esto es para no perder el valor del arreglo y cause conflictos
     }
-    showCategoriesList(); // escribo la lista filtrada
+    mostrarProductos(); // escribo la lista filtrada
   }
-//Función que se ejecuta una vez que se haya lanzado el evento de
-//que el documento se encuentra cargado, es decir, se encuentran todos los
-//elementos HTML presentes.
+
 document.addEventListener("DOMContentLoaded", function(e){
     getJSONData(PRODUCTS_URL).then(function(resultObj){
         if (resultObj.status === "ok"){
-            sortAndShowCategories(POR_PRECIO_ASC, resultObj.data);
+            sortAndShowProducts(POR_PRECIO_ASC, resultObj.data);
         }
     });
 
@@ -113,15 +130,15 @@ document.addEventListener("DOMContentLoaded", function(e){
     });
 
     document.getElementById("precioAscendente").addEventListener("click", function(){
-        sortAndShowCategories(POR_PRECIO_ASC);
+        sortAndShowProducts(POR_PRECIO_ASC);
     });
 
     document.getElementById("precioDecreciente").addEventListener("click", function(){
-        sortAndShowCategories(POR_PRECIO_DESC);
+        sortAndShowProducts(POR_PRECIO_DESC);
     });
 
     document.getElementById("porRelevancia").addEventListener("click", function(){
-        sortAndShowCategories(POR_RELEVANCIA);
+        sortAndShowProducts(POR_RELEVANCIA);
     });
 
     document.getElementById("limpiarFiltro").addEventListener("click", function(){
@@ -131,7 +148,7 @@ document.addEventListener("DOMContentLoaded", function(e){
         minCount = undefined;
         maxCount = undefined;
 
-        showCategoriesList();
+        mostrarProductos();
     });
 
     document.getElementById("rangoFiltrado").addEventListener("click", function(){
@@ -160,7 +177,7 @@ document.addEventListener("DOMContentLoaded", function(e){
             maxCount = undefined;
         }
 
-        showCategoriesList();
+        mostrarProductos();
     });
 });
-
+document.getElementById("buscador").addEventListener("mouseout", verificacion);

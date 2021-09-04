@@ -7,7 +7,13 @@ function verificarDatos() {
 
   if (isChecked) {//Recuerda el usuario
     if (dato.value.trim() === "" || dato2.value.trim() === "") {
-     alert("Hay campos vacios porfavor completalos para seguir");
+     //alert("Hay campos vacios porfavor completalos para seguir");
+     swal({
+      title: "Campos vacios!",
+      text: "Intentalo denuevo",
+      icon: "error",
+      button: "Volver a Intentar",
+    });
       } else {
         
         document.getElementById("feed").innerHTML ="login exitoso /n Rediriguiendo...";
@@ -24,7 +30,13 @@ function verificarDatos() {
     }
   else{//No recuerda el usuario
     if (dato.value.trim() === "" || dato2.value.trim() === "") {
-        alert("Hay campos vacios porfavor completalos para seguir");
+       // alert("Hay campos vacios porfavor completalos para seguir");
+       swal({
+        title: "Campos vacios!",
+        text: "Intentalo denuevo",
+        icon: "error",
+        button: "Volver a Intentar",
+      });
       } else {
         nombreUsuario = dato.value;
         document.getElementById("feed").innerHTML ="login exitoso /n Rediriguiendo...";

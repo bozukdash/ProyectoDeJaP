@@ -170,3 +170,10 @@ abbr .buscarS{
   height: 25px;
 }
 
+#precioC{
+  color:rgb(60, 113, 212);
+} 
+
+.mb-6{
+  color: rgb(255, 255, 255);
+}
