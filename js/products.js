@@ -46,7 +46,7 @@ function ordenarProductos(criterio, array){
 
 function mostrarProductos(){
     let htmlContentToAppend = "";
-    console.log(arrayActual);
+   
     for(let i = 0; i < arrayActual.length; i++){
         let prod = arrayActual[i];
 

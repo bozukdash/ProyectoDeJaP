@@ -153,7 +153,7 @@ abbr .cerrarS{
   height: 40px;
 }
 
-#colorU{
+.colorU{
   background-image: url(https://besthqwallpapers.com/Uploads/1-2-2018/39056/thumb2-turquoise-abstraction-geometric-background-asbestos-lines-material-design.jpg);
   background-size: cover ;
 }
@@ -176,4 +176,92 @@ abbr .buscarS{
 
 .mb-6{
   color: rgb(255, 255, 255);
+}
+
+#fondoAuto {
+  width: 100%;
+  height: 500px;
+}
+
+#carouselExampleIndicators{
+  border: 2px solid rgb(20, 0, 94);
+  /* IMPORTANTE */
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+#carouselExampleIndicators img{
+  width: 400px;
+  height: 600px;
+}
+
+h2{
+  margin-top: 40px;
+  text-align: center;
+}
+
+#fondoColor{
+  background-image: url(https://2.bp.blogspot.com/-8hgkoR9DrzY/WMGwxlEuTgI/AAAAAAAAAWo/d3wDoOnIEQwzPLwSGNtk0R4miy7o4OFgwCLcB/s1600/32.jpg);
+  background-size: cover;
+  margin-right: 1px;
+}
+
+#fondo-comentarios{
+  background-image: url(https://media.istockphoto.com/vectors/like-comment-follower-seamless-pattern-background-icon-business-flat-vector-id876690884?b=1&k=6&m=876690884&s=170667a&w=0&h=mixZXz4uZFoSu2Ml-cXEpwQYHIWdUv0GeFSGdXbIjS4=);
+  margin-right: 1px;
+}
+
+.card{
+  margin-left: 30px;
+}
+
+#precioAuto{
+  margin-top: 30px;
+  margin-left: 320px;
+  background-color: rgb(71, 172, 231);
+}
+
+#bCompras{
+  background-color: rgb(57, 57, 167);
+  font-style: white;
+}
+
+footer{
+  background-color: rgb(35, 35, 43);
+}
+
+hr.new5 {
+  border: 10px solid rgb(28, 29, 94);
+  border-radius: 5px;
+  position:relative;
+  bottom: -20px;
+}
+
+.comment-content{
+  color: #fff;
+}
+
+.personalT{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: rgb(0,0,0);
+  background: radial-gradient(circle, rgb(255, 255, 255) 0%, rgba(21,56,119,1) 47%, rgba(45,119,253,1) 100%);
+}
+
+#nombreUsuarioC{
+  color: darkturquoise;
+}
+
+#animation{
+  position: absolute;
+  float: center;
+  top: 1700px;
+  left: 900px;
+}
+
+#position{
+  position: absolute;
+  float: center;
+  right: 500px;
+  top: 200px;
 }

@@ -51,7 +51,14 @@
       <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
       <div>
         <abbr title="Usuario:"><img class="cerrarS" src="https://www.iconpacks.net/icons/1/free-user-group-icon-296-thumb.png" alt=""></abbr>
-        <button id="colorU" type="button" class="btn btn-success"><span id="userLogeado"></span></button>
+        <button class="btn btn-secondary dropdown-toggle colorU" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span id="userLogeado"></span>
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="my-profile.html">Mi perfil</a>
+          <hr>
+          <a class="dropdown-item" onclick="desconectar();">Cerrar sesión</a>
+        </div>
         <abbr title="Cerrar sesión"><img onclick="desconectar();" class="cerrarS" src="https://openclipart.org/image/800px/307612" alt=""></abbr>
       </div>
     </div>

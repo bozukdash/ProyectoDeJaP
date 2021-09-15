@@ -34,8 +34,14 @@
       <div>
         <img src="" alt="" class="cerrarS" id="userimg">
         <abbr title="Usuario:"><img id="iconUser" class="cerrarS" src="https://www.iconpacks.net/icons/1/free-user-group-icon-296-thumb.png" alt=""></abbr>
-        <button id="colorU" type="button" class="btn btn-success"><span id="userLogeado"></span></button>
-        <abbr title="Cerrar sesión"><img onclick="desconectar();" class="cerrarS" src="https://openclipart.org/image/800px/307612" alt=""></abbr>
+        <button class="btn btn-secondary dropdown-toggle colorU" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span id="userLogeado"></span>
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="my-profile.html">Mi perfil</a>
+          <hr>
+          <a class="dropdown-item" onclick="desconectar();">Cerrar sesión</a>
+        </div><abbr title="Cerrar sesión"><img onclick="desconectar();" class="cerrarS" src="https://openclipart.org/image/800px/307612" alt=""></abbr>
       </div>
     </div>
   </nav>
@@ -74,6 +80,7 @@
       <a type="button" class="btn btn-light btn-lg btn-block" href="products.html">Ver productos</a>
     </div>
   </main>
+  <br>
   <footer class="text-muted">
     <div class="container">
       <p class="float-right">

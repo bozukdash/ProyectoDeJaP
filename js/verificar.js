@@ -66,7 +66,7 @@ function verificarDatos() {
   
 function desconectar() {
   signOut();
-  localStorage.clear();
+  localStorage.removeItem('usuario');
   sessionStorage.clear();
   location.href = "login.html";
 }
