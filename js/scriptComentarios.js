@@ -42,7 +42,7 @@ function campoComentarios(){
                     break;
             
     }
-    console.log(estrellas);
+    
     if (dato.value.trim() === "") {
         //alert("Hay campos vacios porfavor completalos para seguir");
         swal({
