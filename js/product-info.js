@@ -19,13 +19,19 @@ function mostrarInfoDelAuto(infoAuto){
     htmlContentToAppend +=`
     
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-    </ol>
+    <ol class="carousel-indicators">`
+
+    for(let f=0; f< infoAuto.images.length; f++){
+      if(f===0){
+        htmlContentToAppend +=`<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        `
+      }
+      else{
+        htmlContentToAppend +=`<li data-target="#carouselExampleIndicators" data-slide-to="`+ f +`"></li>`
+      }
+    }
+    
+    htmlContentToAppend += `</ol>
     <div class="carousel-inner">
     <div class="carousel-item active">
       <img class="d-block w-100" src="` + infoAuto.images[0] + `" alt="First slide">
@@ -79,26 +85,21 @@ function mostrarInfoDelAuto(infoAuto){
 <div class="container">
 <h3><span class="negrito">Productos relacionados:</span></h3></div>
 
-<div class="card-group">
-  <div class="card" style="width: 20rem;">
-    <img class="img-thumbnail" src="`+ relacionados[infoAuto.relatedProducts[0]].imgSrc +`" alt="Card image cap">
+<div class="card-group">`
+
+for(let r=0; r<infoAuto.relatedProducts.length; r++){ 
+htmlContentToAppend +=`<div id="card2" class="card" style="width: 20rem;">
+    <img class="img-thumbnail" src="`+ relacionados[infoAuto.relatedProducts[r]].imgSrc +`" alt="Card image cap">
     <div class="card-body">
-      <h5 class="card-title">`+ relacionados[infoAuto.relatedProducts[0]].name +`</h5>
-      <p class="card-text">`+ relacionados[infoAuto.relatedProducts[0]].description +`</p>
+      <h5 class="card-title">`+ relacionados[infoAuto.relatedProducts[r]].name +`</h5>
+      <p class="card-text">`+ relacionados[infoAuto.relatedProducts[r]].description +`</p>
       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-      <a href="product-info.html">Ir a Ver</a>
+      <a href="product-info.html">Ver más</a>
     </div>
   </div>
-  <div id="card2" class="card" style="width: 20rem;">
-    <img class="img-thumbnail" src="`+ relacionados[infoAuto.relatedProducts[1]].imgSrc +`" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">`+ relacionados[infoAuto.relatedProducts[1]].name +`</h5>
-      <p class="card-text">`+ relacionados[infoAuto.relatedProducts[1]].description +`</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-      <a href="product-info.html">Ir a Ver</a>
-    </div>
-  </div>
-  </div>
+  `
+}
+htmlContentToAppend +=`</div>
 </div>
 </div>
 <hr class="new5">
