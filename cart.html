@@ -75,17 +75,64 @@
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 <lottie-player id="super" src="https://assets1.lottiefiles.com/private_files/lf30_x2lzmtdl.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
 
+<label for="" id="titulo">Elije tu moneda:</label>
+<select id="moneda" class="select-css form-select form-select-sm" aria-label=".form-select-sm example">
+  <option value="UYU">UYU</option>
+  <option value="USD" selected>USD</option>
+</select>
+<br>
+
   <div class="row" id="carrito">
     <div class="list-group" id="info-carrito">
     </div>
   </div>
 
-
-  <label for="" id="titulo">Elije tu moneda:</label>
-  <select id="moneda" class="select-css form-select form-select-sm" aria-label=".form-select-sm example">
-    <option value="UYU">UYU</option>
-    <option value="USD" selected>USD</option>
-  </select>
+  <form>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+      </div>
+      <br>
+    <div class="form-group">
+      <label for="nombre">Nombre y Apellido</label>
+      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+     </div>
+     <br>
+     <label for="" id="">País:</label>
+     <select id="" class="select-css form-select form-select-sm" aria-label=".form-select-sm example">
+       <option selected>Selecciona tu país:</option>
+     </select>
+     <br>
+     <div class="form-group">
+       <label for="lugar">Lugar</label>
+       <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+      </div>
+      <br>
+      <div class="form-group">
+        <label for="Calle">Calle y esquina</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+       </div>
+       <br>
+       <div>
+        <label for="Envio">Tipo de envio:</label><br>
+        <input type="radio" id="huey" name="drone" value="huey"
+               checked>
+        <label for="huey">Premium (2-5 días)</label>
+      </div>
+      
+      <div>
+        <input type="radio" id="dewey" name="drone" value="dewey">
+        <label for="dewey">Express (5-8 días)</label>
+      </div>
+      
+      <div>
+        <input type="radio" id="louie" name="drone" value="louie">
+        <label for="louie">Standard (12 a 15 días)</label>
+      </div>
+      
+    <button id="enviar"type="submit" class="btn btn-primary">Enviar</button>
+  </form>
+ 
 
 
   <div id="spinner-wrapper">
@@ -108,3 +155,4 @@
 </body>
 
 </html>
+

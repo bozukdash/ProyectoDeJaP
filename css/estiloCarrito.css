@@ -10,7 +10,7 @@ body{
 
 #carrito_tabla{
     margin-left: 150px;
-    margin-top: 100px;
+    margin-top: 25px;
 }
 
 .img-thumbnail{
@@ -20,6 +20,7 @@ body{
 
 #titulo{
     margin-left: 150px;
+    margin-top: 100px;
 }
 
 .select-css {
@@ -71,6 +72,7 @@ body{
 
 #moneda{
     margin-left: 150px;
+    
     width:80px;
 }
 
@@ -89,4 +91,35 @@ label{
 #totalCompras{
     font-weight: bold;
     color:rgb(255, 92, 124);
+}
+
+#nohaynada{
+    margin-left: 350px;
+    margin-top: 50px;
+    border: 1px dashed blue;
+    border-radius: 20px;
+    border-width: 3px;
+}
+
+h2{
+    margin-left: 350px;
+    margin-top: 30px;
+    background-color: red;
+    color: wheat;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+form{
+    margin-left: 300px;
+    width: 600px;
+    background-color: rgb(135, 197, 248);
+    border: 1px dashed blue;
+    border-radius: 10px;
+    border-width: 3px;
+}
+
+#enviar{
+    margin-left: 500px;
+    margin-bottom: 20px;
 }

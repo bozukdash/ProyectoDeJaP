@@ -117,5 +117,11 @@ function actualizarPrecio(pos){
 
 function eliminarLista(pos){
     compras.articles.splice(pos, 1);
-    cargarCarrito();
+    if(compras.articles.length === 0){
+      document.getElementById("info-carrito").innerHTML =`<img id="nohaynada" src="img/Nada.gif" class="img-fluid" alt="Responsive image">
+      <h2>NO HAY PRODUCTOS EN EL CARRITO</h2>`;
+      document.getElementById("myaudio").src = "music/vacio.mp3";
+    }
+    else{cargarCarrito();}
+    
 }
