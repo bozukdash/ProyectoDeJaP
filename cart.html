@@ -31,6 +31,7 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
   <link href="css/dropzone.css" rel="stylesheet">
+  <link href="css/estiloCarrito.css" rel="stylesheet">
   <script src="js/verificar.js"></script>
   <meta name="google-signin-scope" content="profile email" />
     <meta
@@ -42,7 +43,7 @@
 </head>
 
 <body onload="cargarDatos();">
-  <nav class="site-header sticky-top py-1 bg-dark">
+  <nav class="site-header sticky-top py-1 bg-dark" >
     <div class="container d-flex flex-column flex-md-row justify-content-between">
       <a class="py-2 d-none d-md-inline-block" href="index.html">Inicio</a>
       <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
@@ -64,14 +65,29 @@
        </div>
     </div>
   </nav>
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 5 (Fecha de entrega: 17/10/2021) y Entrega 7 (Fecha de entrega: 14/11/2021).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
+
+  <audio id="myaudio" src="music/horaDeCompras.mp3"  autoplay loop></audio>
+  <div class="">
+    <img id="fondoAuto" src="img/fondo_carrito.png" alt="">
+  </div>
+  
+
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player id="super" src="https://assets1.lottiefiles.com/private_files/lf30_x2lzmtdl.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+
+  <div class="row" id="carrito">
+    <div class="list-group" id="info-carrito">
     </div>
   </div>
+
+
+  <label for="" id="titulo">Elije tu moneda:</label>
+  <select id="moneda" class="select-css form-select form-select-sm" aria-label=".form-select-sm example">
+    <option value="UYU">UYU</option>
+    <option value="USD" selected>USD</option>
+  </select>
+
+
   <div id="spinner-wrapper">
     <div class="lds-ring">
       <div></div>
@@ -85,6 +101,10 @@
   <script src="js/dropzone.js"></script>
   <script src="js/init.js"></script>
   <script src="js/cart.js"></script>
+  <script>
+    var audio = document.getElementById("myaudio");
+    audio.volume = 0.02;
+  </script>
 </body>
 
 </html>
