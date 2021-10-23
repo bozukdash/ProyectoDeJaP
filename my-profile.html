@@ -12,6 +12,7 @@
   <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
   <script src="js/verificar.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="google-signin-scope" content="profile email" />
     <meta
       name="google-signin-client_id"
@@ -21,25 +22,15 @@
     <script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
 
 
-  <style>
-    .bd-placeholder-img {
-      font-size: 1.125rem;
-      text-anchor: middle;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-    }
-
-    @media (min-width: 768px) {
-      .bd-placeholder-img-lg {
-        font-size: 3.5rem;
-      }
-    }
-  </style>
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
   <link href="css/dropzone.css" rel="stylesheet">
+  <link href="css/perfil.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+  <script src="js/imagenPerfil.js"></script>
 </head>
 
 <body onload="cargarDatos();">
@@ -65,15 +56,30 @@
        </div>
     </div>
   </nav>
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 6 (Fecha de entrega: 31/10/2021).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
+  <audio id="myaudio" src=""  autoplay loop></audio>
+ 
+  <div class="">
+    <img id="fondoAuto" src="img/perfil.jpg" alt="">
+  </div>
+
+  <div class="">
+    <img id="fotoPerfil" src="img/perfil.png" alt="">
+  </div>
+
+  <button id="cambiarIMG" type="button" class="btn btn-info btn-circle btn-lg" data-toggle="tooltip" data-html="true" title="Cambiar imagen de perfil"><input id="subir" type='file' onchange="readURL(this);" /></button>
+  <i id="particular" class="fas fa-plus-circle"></i>
+
+<div id="perfil">
+  <div class="row" id="carrito">
+    <div class="list-group" id="info-persona">
     </div>
   </div>
-  <footer class="text-muted bg-light">
+
+</div>
+  
+
+
+  <footer class="text-muted bg-dark">
     <div class="container">
       <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
       <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
@@ -98,6 +104,10 @@
   <script src="js/dropzone.js"></script>
   <script src="js/init.js"></script>
   <script src="js/my-profile.js"></script>
+  <script>
+    var audio = document.getElementById("myaudio");
+    audio.volume = 0.05;
+  </script>
 </body>
 
 </html>

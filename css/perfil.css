@@ -1,0 +1,106 @@
+#perfil{
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.datos {
+    margin-left: 90px;
+    margin-top: 80px;
+    width: 300px;
+}
+
+.derecha {
+    margin-left: 800px;
+}
+
+#tituloPerfil{
+    margin-top: 3px;
+    margin-left: 200px;
+}
+
+em{
+    margin-left: 10px;
+    color: cornflowerblue;
+}
+
+#editar{
+    position: absolute;
+    top: 775px;
+    margin-left: 973px;
+    width: 110px;
+    border-radius: 100px;
+}
+
+.btn-circle.btn-xl {
+    width: 70px;
+    height: 70px;
+    padding: 10px 16px;
+    border-radius: 35px;
+    font-size: 24px;
+    line-height: 1.33;
+}
+
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    padding: 6px 0px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.42857;
+}
+
+#botonesE{
+    margin-top: 70px;
+    margin-left: 1120px;
+}
+
+#fotoPerfil{
+    position: absolute;
+    float: center;
+    width: 120px;
+    height: 120px;
+    top: 650px;
+    left: 950px;
+    border: 1px solid rgb(139, 0, 0);
+    border-radius: 100px;
+    border-width: 8px;
+}
+
+#cambiarIMG{
+    position: absolute;
+    float: center;
+    top: 650px;
+    left: 950px;
+}
+
+#subir {
+    
+    opacity: 0%;
+    content: '';
+  }
+
+#particular{
+    position: absolute;
+    float: center;
+    top: 657px;
+    left: 958px;
+    
+
+}
+
+label{
+    font-weight:bold;
+}
+
+.parteA{
+    position: absolute;
+    top: 900px;
+}
+
+.parte{
+    position: absolute;
+    top: 800px;
+}

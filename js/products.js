@@ -54,27 +54,33 @@ function mostrarProductos(){
             ((maxCount == undefined) || (maxCount != undefined && parseInt(prod.cost) <= maxCount))){
 
             htmlContentToAppend += `
-            <a href="product-info.html" class="list-group-item list-group-item-action bg-dark">
-            <div class="row">
-                <div class="col-3">
-                    <img src="` + prod.imgSrc + `" alt="" class="img-thumbnail">
-                </div>
-                <div class="col">
-                    <div class="d-flex w-100 justify-content-between">
-                        <h4 class="mb-6">`+ prod.name +`</h4>
-                        <small class="mb-6 text-muted">` + prod.soldCount + ` artículos</small>
+            <div class = "fondito">
+            <a href="product-info.html">
+                <div class="responsive-container">
+                    <div class="responsive-card">
+                        <div class="cajita">
+                            <div class="imgCard">
+                                <img src="` + prod.imgSrc + `" alt="" class="img-thumbnail">
+                            </div>
+                            <div class="">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-6">`+ prod.name +`</h5>
+                                    <small class="mb-6 text-muted">` + prod.soldCount + ` artículos</small>
+                                </div>
+                                <div class="d-flex w-200 justify-content-between">
+                                    <h4 class="mb-6"></h4>
+                                    <h6 id="precioC">` + prod.cost + ` USD</h6>
+                                </div>
+                                <div>
+                                <p class="mb-6">`+ prod.description +`</p>
+                                </div>
+                            </div>
+                        
                     </div>
-                    <div class="d-flex w-200 justify-content-between">
-                         <h4 class="mb-6"></h4>
-                         <h6 id="precioC">` + prod.cost + ` USD</h6>
-                    </div>
-                    <div>
-                     <p class="mb-6">`+ prod.description +`</p>
-                     </div>
                 </div>
-                
             </div>
         </a>
+        </div>
         `
         }
 
