@@ -37,9 +37,15 @@
     border: 2px dashed rgb(3, 245, 245);
 }
 
-.imgCard{
-    border: 1px dashed rgb(39, 39, 39);
-    border-radius: 40px;
+
+
+a:visited {
+    color: #27272700;/* <-- El color del background */
+}
+
+
+.cajita:hover {
+    background: #0c0d0e;
 }
 
 

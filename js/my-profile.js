@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
     </div>
     <div class="datos">
          <label class="TextoA">Edad:</label>
-            <input value ="`+datosU.edad +`" id="edad" type="number" min=0 class="form-control bg-dark text-white" aria-describedby="emailHelp" placeholder="">
+            <input value ="`+ datosU.edad +`" id="edad" type="number" min=0 class="form-control bg-dark text-white" aria-describedby="emailHelp" placeholder="">
     </div>
     <div class="datos parteA">
         <label class="TextoA derecha">Correo electronico:</label>
@@ -93,6 +93,7 @@ function modoEditarON(){//habilita el modo edición del perfil
     document.getElementById("editar").style.display = "none";
     document.getElementById("bien").style.display = "block";
     document.getElementById("mal").style.display = "block";
+
     document.getElementById("name").disabled = false;
     document.getElementById("otroname").disabled = false;
     document.getElementById("edad").disabled = false;

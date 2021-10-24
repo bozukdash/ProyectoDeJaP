@@ -56,3 +56,11 @@ body {
     box-shadow: 0 7px 0 rgb(104, 218, 155);
     background-color: rgb(108, 184, 247);
 }
+
+h2{
+    margin-top: 30px;
+    font-family: "Trebuchet MS", Verdana, sans-serif;
+    text-align: center;
+    color: aliceblue;
+  }
+
