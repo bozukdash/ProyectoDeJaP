@@ -64,3 +64,10 @@
 #responsiveU:hover{
     background:none;
 }
+
+@media (max-width : 435px){
+
+  #filtros3{
+    margin-left: -80px;
+  }
+}

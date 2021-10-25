@@ -125,3 +125,6 @@ function eliminarLista(pos){
     else{cargarCarrito();}
     
 }
+
+
+document.head.
