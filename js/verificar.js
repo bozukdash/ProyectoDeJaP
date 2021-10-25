@@ -67,6 +67,9 @@ function verificarDatos() {
 function desconectar() {
   signOut();
   localStorage.removeItem('usuario');
+  localStorage.removeItem('genero');
+  localStorage.removeItem('datosPerfil');
+  localStorage.removeItem('imagenP');
   sessionStorage.clear();
   location.href = "login.html";
 }

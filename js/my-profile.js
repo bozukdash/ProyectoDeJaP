@@ -8,17 +8,17 @@ datosU.cel = "";
 
 
 document.addEventListener("DOMContentLoaded", function (e) {
-    let genero = JSON.parse(sessionStorage.getItem("genero"));
+    let genero = JSON.parse(localStorage.getItem("genero"));
     if (genero === null) {
         location.href = "genero.html";
     }
 
-    let perfil = JSON.parse(sessionStorage.getItem("datosPerfil"));
+    let perfil = JSON.parse(localStorage.getItem("datosPerfil"));
     if (perfil !== null) {
         datosU = perfil;
     }
 
-    let imgenGuardada = sessionStorage.getItem("imagenP");
+    let imgenGuardada = localStorage.getItem("imagenP");
     if (imgenGuardada) {
         document.querySelector("#fotoPerfil").setAttribute("src", imgenGuardada);
     }
@@ -83,6 +83,7 @@ function cargarUsuario() {
     }
     else if(userNo === null){
       usuario = userPermanece.nombre;
+      localStorage.setItem("usuario", JSON.stringify(userPermanece));
        }
        else{
           usuario = userNo.nombre;
@@ -115,7 +116,7 @@ function guardarDatos(opcion){//guarda los datos en session
         datosU.email = document.getElementById("email").value;
         datosU.cel = document.getElementById("cel").value;
 
-        sessionStorage.setItem("datosPerfil", JSON.stringify(datosU));
+        localStorage.setItem("datosPerfil", JSON.stringify(datosU));
         location.href = "my-profile.html"
       
     }

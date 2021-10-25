@@ -4,7 +4,7 @@ function readURL(input) {
         var reader = new FileReader();
 
         reader.addEventListener("load", () => {
-            sessionStorage.setItem("imagenP", reader.result);
+            localStorage.setItem("imagenP", reader.result);
         });
 
         reader.onload = function (e) {
