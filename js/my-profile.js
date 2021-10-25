@@ -26,10 +26,10 @@ document.addEventListener("DOMContentLoaded", function (e) {
     cargarUsuario();
 
     if(genero ==="femenino"){
-        document.getElementById("perfil").style.backgroundImage = "url('../img/women.png')"
+        document.getElementById("perfil").style.backgroundImage = "url(https://i.ibb.co/RQ7Nx2r/women.png)"
    }
     else{
-        document.getElementById("perfil").style.backgroundImage = "url('../img/men.png')"
+        document.getElementById("perfil").style.backgroundImage = "url(https://i.ibb.co/cNGFZB9/men.png)"
   }
     let infoPerfil=`
     <h2 id="tituloPerfil">Este es el perfil del usuario:<em>`+usuario+`</em></h2>
