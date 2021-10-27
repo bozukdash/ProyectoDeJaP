@@ -1,0 +1,28 @@
+[
+    {
+    "name":"Ropero",
+    "description":"El Armario es uno de los elementos principales de una habitación, para tener un ambiente organizado y hermoso necesitas un mueble que facilite la organización de tu ropa y pertenencias.",
+    "cost": 103,
+    "currency":"USD",
+    "imgSrc":"https://http2.mlstatic.com/D_NQ_NP_942278-MLU42767577846_072020-O.webp",
+     "soldCount":400
+    },
+
+    {
+    "name":"Sommier",
+    "description":"Muy comoda y con una segunda cama para más expacio",
+    "cost":321,
+    "currency":"USD",
+    "imgSrc":"https://http2.mlstatic.com/D_NQ_NP_991068-MLU47031479270_082021-O.webp",
+    "soldCount":211
+    },
+
+    {
+    "name":"Mesa de comedor",
+    "description":"Juego de comedor muy fino y comodo ideal para la familia moderna",
+    "cost": 144,
+    "currency":"USD",
+    "imgSrc":"https://http2.mlstatic.com/D_NQ_NP_883566-MLU45747446634_042021-O.webp",
+    "soldCount": 87
+    }
+]

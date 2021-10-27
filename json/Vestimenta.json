@@ -1,0 +1,28 @@
+[
+    {
+    "name":"Camiseta de Uruguay",
+    "description":"Camiseta de algodon super comoda, para alentar a tu equipo ",
+    "cost": 75,
+    "currency":"USD",
+    "imgSrc":"https://http2.mlstatic.com/D_NQ_NP_731002-MLU46249594057_062021-O.webp",
+     "soldCount":546
+    },
+
+    {
+    "name":"Short de baño",
+    "description":"Muy comoda y ideal para el verano e idas a la playa",
+    "cost":19,
+    "currency":"USD",
+    "imgSrc":"https://http2.mlstatic.com/D_NQ_NP_807925-MLU44296551386_122020-O.webp",
+    "soldCount":889
+    },
+
+    {
+    "name":"Chinelas sandalias",
+    "description":"Marca la diferencia con unas Chinelas de estilo y calidad Chinelas comodas y amigables para este verano",
+    "cost": 28,
+    "currency":"USD",
+    "imgSrc":"https://http2.mlstatic.com/D_NQ_NP_885883-MLU43453882720_092020-O.webp",
+    "soldCount": 357
+    }
+]

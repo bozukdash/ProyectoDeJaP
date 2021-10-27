@@ -1,0 +1,20 @@
+[
+    {
+    "name":"Taladro",
+    "description":"Una util herramienta con varias piezas que pueden ayudarte en tu trabajo",
+    "cost": 227,
+    "currency":"USD",
+    "imgSrc":"https://f.fenicio.app/imgs/046831/electroventas.com.uy/elecuy/1ee0/webp/catalogo/ING-CIDLI2002ING-CIDLI20021/460x600/taladro-atornillador-c-percutor-ingco-20v-2-baterias-cargador-bolso-y-accesorios-taladro-atornillador-c-percutor-ingco-20v-2-baterias-cargador-bolso-y-accesorios.jpg",
+    "soldCount":99
+    },
+
+    {
+    "name":"Caja de herramientas",
+    "description":"Excelete caja de herramientas con variedades para la reparación de todo tipo de cosas",
+    "cost": 63,
+    "currency":"USD",
+    "imgSrc":"https://d391ci4kxgasl8.cloudfront.net/fit-in/524x480/filters:fill(FFFFFF):quality(90):format(webp)/_img_productos/kit-herramientas-nappo-nhk-008-foto1.jpg",
+    "soldCount":234
+    }
+
+]

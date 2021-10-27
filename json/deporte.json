@@ -1,0 +1,20 @@
+[
+    {
+    "name":"Raqueta de tenis",
+    "description":"Con una cabeza de tamaño mediano y un peso medio, esta raqueta ofrece una sensación y una precisión mejoradas sin sacrificar la potencia y la estabilidad.",
+    "cost": 145,
+    "currency":"USD",
+    "imgSrc":"https://f.fenicio.app/imgs/2e1c6e/electroventas.com.uy/elecuy/cc31/webp/catalogo/WILWR054810PROWILWR054810PRO1/2000-2000/raqueta-de-tenis-wilson-blade-feel-team-103-bolso-raquetero-x3-raqueta-de-tenis-wilson-blade-feel-team-103-bolso-raquetero-x3.jpg",
+    "soldCount":120
+    },
+
+    {
+    "name":"Pelota Fútbol Penalty",
+    "description":"Tiene una cámara 6D con excelente resistencia a la retención de aire, proporcionando un equilibrio total del balón.",
+    "cost": 25,
+    "currency":"USD",
+    "imgSrc":"https://http2.mlstatic.com/D_NQ_NP_739263-MLU45855298633_052021-O.webp",
+    "soldCount":609
+    }
+
+]

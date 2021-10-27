@@ -1,0 +1,37 @@
+[
+    {
+    "name":"Refrigerador",
+    "description":"Refrigerador frio en seco, muy buena capacidad e ideal para guardar cosas en verano",
+    "cost": 415,
+    "currency":"USD",
+    "imgSrc":"https://i.ibb.co/hsJvvwB/eladera.png",
+    "soldCount":222
+    },
+
+    {
+    "name":"Licuadora",
+    "description":"Esta licuadora Punktal cuenta con un motor de 520W, una jarra de 1,5 litros transparente y 4 potentes cuchillas aptas para picar hielo.",
+    "cost":32,
+    "currency":"USD",
+    "imgSrc":"https://d391ci4kxgasl8.cloudfront.net/fit-in/524x480/filters:fill(FFFFFF):quality(90):format(webp)/_img_productos/licuadora-punktal-pk-li287-foto1.jpg",
+    "soldCount":701
+    },
+
+    {
+    "name":"Ventilador",
+    "description":"Ventilador de 40 cm 3 en 1 con diseño moderno y elegante, adaptable para cualquier espacio del hogar, de pedestal, de pared y de mesa",
+    "cost": 29,
+    "currency":"USD",
+    "imgSrc":"https://i.ibb.co/B2Kn5Yr/fff.png",
+    "soldCount": 809
+    },
+
+    {
+        "name":"Lavaropas",
+        "description":"Lavador automatico buena capacidad, varios programas de lavado",
+        "cost": 415,
+        "currency":"USD",
+        "imgSrc":"https://f.fenicio.app/imgs/33c2c1/electroventas.com.uy/elecuy/79e2/webp/catalogo/JAM36900JAM369001/2000-2000/lavarropas-automatico-james-6kg-carga-frontal-garantia-oficial-lavarropas-automatico-james-6kg-carga-frontal-garantia-oficial.jpg",
+        "soldCount": 444
+    }
+]

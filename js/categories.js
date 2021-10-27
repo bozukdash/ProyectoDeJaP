@@ -45,7 +45,7 @@ function showCategoriesList(){
             ((maxCount == undefined) || (maxCount != undefined && parseInt(category.productCount) <= maxCount))){
 
             htmlContentToAppend += `
-            <a href="category-info.html" class="list-group-item list-group-item-action">
+            <a  href="products.html" class="list-group-item list-group-item-action" onclick="guardarCategoria(` + i + `);">
                 <div class="row">
                     <div class="col-3">
                         <img src="` + category.imgSrc + `" alt="` + category.description + `" class="img-thumbnail">
@@ -134,3 +134,9 @@ document.addEventListener("DOMContentLoaded", function(e){
         showCategoriesList();
     });
 });
+
+function guardarCategoria(pos){
+    let tipoCtegoria = currentCategoriesArray[pos].name;
+    console.log(tipoCtegoria);
+    localStorage.setItem("mostrarCategoria",tipoCtegoria);
+}

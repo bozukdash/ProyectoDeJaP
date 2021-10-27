@@ -1,0 +1,28 @@
+[
+    {
+    "name":"Cuerda de saltar",
+    "description":"Ideal para hacer ejerciocio y pasar un agradable moemto de diversión",
+    "cost": 3,
+    "currency":"USD",
+    "imgSrc":"https://http2.mlstatic.com/D_NQ_NP_690603-MLU47283483049_082021-O.webp",
+     "soldCount":1005
+    },
+
+    {
+    "name":"Tomate Uno",
+    "description":"¡Una versión +18 del clásico UNO! TOMATE UNO es un UNO estándar que además contiene cartas especiales, con memes y mucha diversión.",
+    "cost":20,
+    "currency":"USD",
+    "imgSrc":"https://http2.mlstatic.com/D_NQ_NP_759177-MLU46992446458_082021-O.webp",
+    "soldCount":900
+    },
+
+    {
+    "name":"Futbolito",
+    "description":"Ideal para divertirse con amigos y pasar buenos ratos",
+    "cost": 82,
+    "currency":"USD",
+    "imgSrc":"https://http2.mlstatic.com/D_NQ_NP_726099-MLU47031277104_082021-O.webp",
+    "soldCount": 345
+    }
+]

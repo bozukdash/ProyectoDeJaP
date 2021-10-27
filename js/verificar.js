@@ -6,6 +6,7 @@ function verificarDatos() {
   var isChecked = document.getElementById("recordar").checked;
 
   if (isChecked) {//Recuerda el usuario
+    localStorage.setItem("mostrarCategoria","Autos");
     if (dato.value.trim() === "" || dato2.value.trim() === "") {
      //alert("Hay campos vacios porfavor completalos para seguir");
      swal({
@@ -75,6 +76,7 @@ function desconectar() {
 }
 
 function cargarDatos() {
+  
   let userNo = JSON.parse(localStorage.getItem("usuario"));
   let userPermanece = JSON.parse(sessionStorage.getItem("usuario"));
   if (userNo === null && userPermanece ===null) {

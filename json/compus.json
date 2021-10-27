@@ -1,0 +1,20 @@
+[
+    {
+    "name":"Notebook HP Stream",
+    "description":"MODELO: 14-CB120ca ( NOT1873 Gris) / 14-CB171wm ( NOT1825 Azul) / 14-CB172wm ( NOT1826 Rosa) / 14-CB174wm ( NOT1827 Negro)",
+    "cost": 463,
+    "currency":"USD",
+    "imgSrc":"https://f.fenicio.app/imgs/21ce78/electroventas.com.uy/elecuy/6fab/webp/catalogo/NOT18NOT18271/2000-2000/notebook-hp-stream-dualcore-4gb-64gb-ssd-14-windows-10-negro.jpg",
+    "soldCount":450
+    },
+
+    {
+    "name":"Notebook Lenovo Dual Core",
+    "description":"Variedad de diseños y muy llamativos ideal para la oficina o recrativos",
+    "cost": 519,
+    "currency":"USD",
+    "imgSrc":"https://f.fenicio.app/imgs/33bd84/electroventas.com.uy/elecuy/5d4b/webp/catalogo/NOT1975NOT19751/2000-2000/notebook-lenovo-dual-core-4gb-ram-64gb-ssd-14-windows-10-pro-notebook-lenovo-dual-core-4gb-ram-64gb-ssd-14-windows-10-pro.jpg",
+    "soldCount":301
+    }
+
+]
