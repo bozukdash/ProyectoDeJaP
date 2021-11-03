@@ -1,176 +1,377 @@
 <!DOCTYPE html>
 <!-- saved from url=(0049)https://getbootstrap.com/docs/4.3/examples/album/ -->
 <html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <title>eMercado - Todo lo que busques está aquí</title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <title>eMercado - Todo lo que busques está aquí</title>
+    <link
+      rel="canonical"
+      href="https://getbootstrap.com/docs/4.3/examples/album/"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i"
+      rel="stylesheet"
+    />
 
-  <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
-  <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
-
-  <style>
-    .bd-placeholder-img {
-      font-size: 1.125rem;
-      text-anchor: middle;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-    }
-
-    @media (min-width: 768px) {
-      .bd-placeholder-img-lg {
-        font-size: 3.5rem;
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
       }
-    }
-  </style>
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/styles.css" rel="stylesheet">
-  <link href="css/dropzone.css" rel="stylesheet">
-  <link href="css/estiloCarrito.css" rel="stylesheet">
-  <script src="js/verificar.js"></script>
-  <meta name="google-signin-scope" content="profile email" />
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/dropzone.css" rel="stylesheet" />
+    <link href="css/estiloCarrito.css" rel="stylesheet" />
+    <script src="js/verificar.js"></script>
+    <meta name="google-signin-scope" content="profile email" />
     <meta
       name="google-signin-client_id"
       content="77369850918-a3h863fddjt1cvju2tovh4g688agoud1.apps.googleusercontent.com"
     />
     <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link href="css/responsiveNav.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
+    <script
+      src="https://apis.google.com/js/platform.js?onload=onLoad"
+      async
+      defer
+    ></script>
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <link href="css/responsiveNav.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
 
-<body onload="cargarDatos();">
-  <nav class="site-header sticky-top py-1">
-    <ul>
-      <li><a class="text-white"  href="index.html">Inicio</a></li>
-      <li><a class="text-white" href="categories.html">Categorías</a></li>
-      <li><a class="text-white" href="products.html">Productos</a></li>
-      <li><a class="text-white" href="sell.html">Vender</a></li>
-      <li>
-        <div id="responsiveU">
-          <abbr title="Usuario:"><img id="iconUser" class="cerrarS" src="https://www.iconpacks.net/icons/1/free-user-group-icon-296-thumb.png" alt=""></abbr>
-          <button class="btn btn-secondary dropdown-toggle colorU" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <span id="userLogeado"></span>
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="my-profile.html">Mi perfil</a>
-            <hr>
-            <a class="dropdown-item" href="cart.html">Mi carrito</a>
-            <hr>
-            <a class="dropdown-item" onclick="desconectar();">Cerrar sesión</a>
+  <body onload="cargarDatos();">
+    <nav class="site-header sticky-top py-1">
+      <ul>
+        <li><a class="text-white" href="index.html">Inicio</a></li>
+        <li><a class="text-white" href="categories.html">Categorías</a></li>
+        <li><a class="text-white" href="products.html">Productos</a></li>
+        <li><a class="text-white" href="sell.html">Vender</a></li>
+        <li>
+          <div id="responsiveU">
+            <abbr title="Usuario:"
+              ><img
+                id="iconUser"
+                class="cerrarS"
+                src="https://www.iconpacks.net/icons/1/free-user-group-icon-296-thumb.png"
+                alt=""
+            /></abbr>
+            <button
+              class="btn btn-secondary dropdown-toggle colorU"
+              type="button"
+              id="dropdownMenuButton"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <span id="userLogeado"></span>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="my-profile.html">Mi perfil</a>
+              <hr />
+              <a class="dropdown-item" href="cart.html">Mi carrito</a>
+              <hr />
+              <a class="dropdown-item" onclick="desconectar();"
+                >Cerrar sesión</a
+              >
+            </div>
           </div>
-         </div>
-      </li>
-    </ul>
-    
-    <div class="hide">
-      <i class="fa fa-bars" aria-hidden="true"></i> Menu
+        </li>
+      </ul>
+
+      <div class="hide"><i class="fa fa-bars" aria-hidden="true"></i> Menu</div>
+    </nav>
+
+    <audio id="myaudio" src="music/horaDeCompras.mp3" autoplay loop></audio>
+    <div class="">
+      <img id="fondoAuto" src="img/fondo_carrito.png" alt="" />
     </div>
-  </nav>
 
-  <audio id="myaudio" src="music/horaDeCompras.mp3"  autoplay loop></audio>
-  <div class="">
-    <img id="fondoAuto" src="img/fondo_carrito.png" alt="">
-  </div>
-  
+    <lottie-player
+      id="super"
+      src="https://assets1.lottiefiles.com/private_files/lf30_x2lzmtdl.json"
+      background="transparent"
+      speed="1"
+      style="width: 300px; height: 300px"
+      loop
+      autoplay
+    ></lottie-player>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <label for="" id="titulo">Elije tu moneda:</label>
+    <select
+      id="moneda"
+      class="select-css form-select form-select-sm"
+      aria-label=".form-select-sm example"
+    >
+      <option value="UYU">UYU</option>
+      <option value="USD" selected>USD</option>
+    </select>
+    <br />
 
-
-<lottie-player id="super" src="https://assets1.lottiefiles.com/private_files/lf30_x2lzmtdl.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
-<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-<label for="" id="titulo">Elije tu moneda:</label>
-<select id="moneda" class="select-css form-select form-select-sm" aria-label=".form-select-sm example">
-  <option value="UYU">UYU</option>
-  <option value="USD" selected>USD</option>
-</select>
-<br>
-
-  <div class="row" id="carrito">
-    <div class="list-group" id="info-carrito">
+    <div class="row" id="carrito">
+      <div class="list-group" id="info-carrito"></div>
     </div>
-  </div>
 
-  <form>
-    <div class="form-group">
-      <label for="exampleInputEmail1">Email</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <form id="envioForm">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email</label>
+        <input
+          required
+          type="email"
+          class="form-control"
+          id="emailCompras"
+          aria-describedby="emailHelp"
+          placeholder="Coloca el email"
+        />
+        <br>
+        <span id="emailOK"></span>
       </div>
-      <br>
-    <div class="form-group">
-      <label for="nombre">Nombre y Apellido</label>
-      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-     </div>
-     <br>
-     <label for="" id="">País:</label>
-     <select id="" class="select-css form-select form-select-sm" aria-label=".form-select-sm example">
-       <option selected>Selecciona tu país:</option>
-     </select>
-     <br>
-     <div class="form-group">
-       <label for="lugar">Lugar</label>
-       <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+      <br />
+      <div class="form-group">
+        <label for="nombre">Nombre y Apellido</label>
+        <input
+          required
+          type="text"
+          class="form-control"
+          id="datosCompras"
+          aria-describedby="emailHelp"
+          placeholder="Nombre y Apellido"
+        />
       </div>
-      <br>
+      <br />
+      <label for="" id="">País:</label>
+      <select
+        required
+        id="paises"
+        class="select-css form-select form-select-sm"
+        aria-label=".form-select-sm example"
+      >
+        <option selected>Selecciona tu país:</option>
+      </select>
+      <br />
+      <div class="form-group">
+        <label for="lugar">Lugar</label>
+        <input
+          required
+          type="text"
+          class="form-control"
+          id="lugar"
+          aria-describedby="emailHelp"
+          placeholder="Localidad"
+        />
+      </div>
+      <br />
       <div class="form-group">
         <label for="Calle">Calle y esquina</label>
-        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-       </div>
-       <br>
-       <div>
-        <label for="Envio">Tipo de envio:</label><br>
-        <input type="radio" id="huey" name="drone" value="huey"
-               checked>
-        <label for="huey">Premium (2-5 días)</label>
+        <input
+          required
+          type="text"
+          class="form-control"
+          id="direccionCompras"
+          aria-describedby="emailHelp"
+          placeholder="Direccion"
+        />
       </div>
-      
-      <div>
-        <input type="radio" id="dewey" name="drone" value="dewey">
-        <label for="dewey">Express (5-8 días)</label>
-      </div>
-      
-      <div>
-        <input type="radio" id="louie" name="drone" value="louie">
-        <label for="louie">Standard (12 a 15 días)</label>
-      </div>
-      
-    <button id="enviar"type="submit" class="btn btn-primary">Enviar</button>
-  </form>
- 
+      <br />
 
-  <footer class="text-muted bg-dark">
-    <div class="container">
-      <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
-      <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
-    </div>
-  </footer>
-  <div id="spinner-wrapper">
-    <div class="lds-ring">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-  </div>
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/dropzone.js"></script>
-  <script src="js/init.js"></script>
-  <script src="js/cart.js"></script>
-  <script>
-    var audio = document.getElementById("myaudio");
-    audio.volume = 0.02;
-  </script>
-  <script>
-    $(".hide").on('click', function() {
-      $("nav ul").toggle('slow');
-    })
-  </script>
-</body>
+      <div class="form-group">
+        <label for="Numero">Número de puerta</label>
+        <input
+          required
+          type="number"
+          class="form-control"
+          id="puertaNum"
+          aria-describedby="emailHelp"
+          placeholder="Numero de puerta"
+        />
+      </div>
+      <br />
+      <div id="comboEnvios">
+        <div>
+          <label for="Envio">Tipo de envio:</label><br />
+          <input type="radio" id="envio1" name="drone" value="huey" checked />
+          <label for="huey">Premium (2-5 días) Costo del 15%</label>
+        </div>
+  
+        <div>
+          <input type="radio" id="envio2" name="drone" value="dewey" />
+          <label for="dewey">Express (5-8 días) Costo del 7%</label>
+        </div>
+  
+        <div>
+          <input type="radio" id="envio3" name="drone" value="louie" checked/>
+          <label for="louie">Standard (12 a 15 días) Costo del 5%</label>
+        </div>
+      </div>
+      
+      <br>
+      <!-- Button trigger modal -->
+      <button
+        type="button"
+        class="btn btn-dark"
+        data-toggle="modal"
+        data-target="#exampleModal"
+      >
+        Forma de Pago
+      </button>
 
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog bg-dark">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Elige tu forma de pago</h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <button type="button" class="btn btn-warning" onclick="mostrarTarjetaC();">Tarjeta de crédito</button>
+              <button type="button" class="btn btn-info" onclick="mostrarTarjetaB();">Transferencia bancaria</button>
+              <br>
+              <div id="tarjetaCredito">
+                <br>
+                <div class="form-group">
+                  <label for="Calle">Número de Tarjeta </label>
+                  <input
+                    
+                    type="text"
+                    class="form-control"
+                    id="NumT"
+                    aria-describedby="emailHelp"
+                    placeholder="Número de Tarjeta"
+                  />
+                </div>
+                <br />
+          
+                <div class="form-group">
+                  <label for="Numero">Código de seg.</label>
+                  <input
+                    
+                    type="number"
+                    class="form-control"
+                    id="CodS"
+                    aria-describedby="emailHelp"
+                    placeholder="Código de seguridad"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="lugar">Vencimiento (DD/MM)</label>
+                  <input
+                    
+                    type="text"
+                    class="form-control"
+                    id="FechaV"
+                    aria-describedby="emailHelp"
+                    placeholder="Fecha Vencimiento"
+                  />
+                </div>
+                <br />
+              </div>
+              <div id="targetaB">
+                <br>
+                <div class="form-group">
+                  <label for="lugar">Número de cuenta</label>
+                  <input
+                    
+                    type="text"
+                    class="form-control"
+                    id="NumC"
+                    aria-describedby="emailHelp"
+                    placeholder="Número de cuenta"
+                  />
+                </div>
+                <br />
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Cerrar
+              </button>
+              <button type="button" class="btn btn-primary">
+                Guardar Cambios
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button id="enviar" type="button" class="btn btn-primary">Enviar</button>
+    </form>
+    <br /><br />
+
+    <div class="row" id="carritoFinal">
+      <div class="list-group" id="info-Final"></div>
+    </div>
+
+    <footer class="text-muted bg-dark">
+      <div class="container">
+        <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
+        <p>
+          Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la
+          letra del obligatorio.
+        </p>
+      </div>
+    </footer>
+    <div id="spinner-wrapper">
+      <div class="lds-ring">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/dropzone.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/cart.js"></script>
+    <script>
+      var audio = document.getElementById("myaudio");
+      audio.volume = 0.02;
+    </script>
+    <script>
+      $(".hide").on("click", function () {
+        $("nav ul").toggle("slow");
+      });
+    </script>
+  </body>
 </html>
-

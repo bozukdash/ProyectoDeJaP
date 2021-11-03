@@ -128,13 +128,13 @@ document.addEventListener("DOMContentLoaded", function(e){
         getJSONData(PRODUCTS_URL).then(function(resultObj){
             if (resultObj.status === "ok"){
                 arrayActual = resultObj.data.concat(autoExtra);
-                sortAndShowProducts(POR_PRECIO_ASC, resultObj.data);
+                sortAndShowProducts(POR_PRECIO_ASC, arrayActual);
             }
         });
     }
     if(qProducto === "Celulares"){
         document.body.style.backgroundImage = "url(https://norfipc.com/img/celulares/fondos-pantalla-arte-celular.jpeg)"
-        getJSONData("../json/celulares.json").then(function(resultObj){
+        getJSONData("https://raw.githubusercontent.com/juanmaferreira/ProyectoDeJaP/main/json/celulares.json").then(function(resultObj){
             if (resultObj.status === "ok"){
                 sortAndShowProducts(POR_PRECIO_ASC, resultObj.data);
             }
@@ -142,7 +142,7 @@ document.addEventListener("DOMContentLoaded", function(e){
     }
     if(qProducto === "Computadoras"){
         document.body.style.backgroundImage = "url(https://www.teahub.io/photos/full/139-1393655_computadoras-para-fondo-de-pantalla.jpg)"
-        getJSONData("../json/compus.json").then(function(resultObj){
+        getJSONData("https://raw.githubusercontent.com/juanmaferreira/ProyectoDeJaP/main/json/compus.json").then(function(resultObj){
             if (resultObj.status === "ok"){
                 sortAndShowProducts(POR_PRECIO_ASC, resultObj.data);
             }
@@ -150,7 +150,7 @@ document.addEventListener("DOMContentLoaded", function(e){
     }
     if(qProducto === "Deporte"){
         document.body.style.backgroundImage = "url(https://www.mural-wallpaper.com/wp-content/uploads/2020/11/S-SP25.jpg)"
-        getJSONData("../json/deporte.json").then(function(resultObj){
+        getJSONData("https://raw.githubusercontent.com/juanmaferreira/ProyectoDeJaP/main/json/json/deporte.json").then(function(resultObj){
             if (resultObj.status === "ok"){
                 sortAndShowProducts(POR_PRECIO_ASC, resultObj.data);
             }
@@ -158,7 +158,7 @@ document.addEventListener("DOMContentLoaded", function(e){
     }
     if(qProducto === "Electrodomésticos"){
         document.body.style.backgroundImage = "url(https://media.istockphoto.com/photos/set-of-home-kitchen-appliances-in-the-room-on-the-wall-background-picture-id1196974664?k=20&m=1196974664&s=612x612&w=0&h=9PNuGOYbsj7J2DTPA8J6kTJUoRHKHLAyUmhRgCdYXVE=)"
-        getJSONData("../json/electrodomesticos.json").then(function(resultObj){
+        getJSONData("https://raw.githubusercontent.com/juanmaferreira/ProyectoDeJaP/main/json/electrodomesticos.json").then(function(resultObj){
             if (resultObj.status === "ok"){
                 sortAndShowProducts(POR_PRECIO_ASC, resultObj.data);
             }
@@ -166,7 +166,7 @@ document.addEventListener("DOMContentLoaded", function(e){
     }
     if(qProducto === "Herramientas"){
         document.body.style.backgroundImage = "url(https://www.callcentrehelper.com/images/stories/2020/07/tools-wallpaper-760.png)"
-        getJSONData("../json/herramientas.json").then(function(resultObj){
+        getJSONData("https://raw.githubusercontent.com/juanmaferreira/ProyectoDeJaP/main/json/herramientas.json").then(function(resultObj){
             if (resultObj.status === "ok"){
                 sortAndShowProducts(POR_PRECIO_ASC, resultObj.data);
             }
@@ -174,7 +174,7 @@ document.addEventListener("DOMContentLoaded", function(e){
     }
     if(qProducto === "Juguetes"){
         document.body.style.backgroundImage = "url(https://previews.123rf.com/images/cristi180884/cristi1808841011/cristi180884101100033/8114965-toy-wallpaper.jpg)"
-        getJSONData("../json/juguetes.json").then(function(resultObj){
+        getJSONData("https://raw.githubusercontent.com/juanmaferreira/ProyectoDeJaP/main/json/juguetes.json").then(function(resultObj){
             if (resultObj.status === "ok"){
                 sortAndShowProducts(POR_PRECIO_ASC, resultObj.data);
             }
@@ -182,7 +182,7 @@ document.addEventListener("DOMContentLoaded", function(e){
     }
     if(qProducto === "Muebles"){
         document.body.style.backgroundImage = "url(https://c4.wallpaperflare.com/wallpaper/75/719/692/escalera-hogar-interior-muebles-wallpaper-preview.jpg)"
-        getJSONData("../json/muebles.json").then(function(resultObj){
+        getJSONData("https://raw.githubusercontent.com/juanmaferreira/ProyectoDeJaP/main/json/muebles.json").then(function(resultObj){
             if (resultObj.status === "ok"){
                 sortAndShowProducts(POR_PRECIO_ASC, resultObj.data);
             }
@@ -190,7 +190,7 @@ document.addEventListener("DOMContentLoaded", function(e){
     }
     if(qProducto === "Vestimenta"){
         document.body.style.backgroundImage = "url(https://previews.123rf.com/images/tatianakost/tatianakost1608/tatianakost160800120/61468594-fashion-illustration-seamless-pattern-vector-hand-drawn-fashionable-women-clothes-and-accessories-sk.jpg)"
-        getJSONData("../json/Vestimenta.json").then(function(resultObj){
+        getJSONData("https://raw.githubusercontent.com/juanmaferreira/ProyectoDeJaP/main/json/Vestimenta.json").then(function(resultObj){
             if (resultObj.status === "ok"){
                 sortAndShowProducts(POR_PRECIO_ASC, resultObj.data);
             }

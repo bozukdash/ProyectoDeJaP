@@ -7,6 +7,7 @@ const PRODUCT_INFO_COMMENTS_URL = "https://japdevdep.github.io/ecommerce-api/pro
 const CART_INFO_URL = "https://japdevdep.github.io/ecommerce-api/cart/987.json";
 const CART_BUY_URL = "https://japdevdep.github.io/ecommerce-api/cart/buy.json";
 const CARRITO_PRO = "https://japdevdep.github.io/ecommerce-api/cart/654.json";//poductos extra del carrito
+const PAISES ="https://gist.githubusercontent.com/Yizack/bbfce31e0217a3689c8d961a356cb10d/raw/107e0bdf27918adea625410af0d340e8fc1cd5bf/countries.json"; 
 
 var showSpinner = function(){
   document.getElementById("spinner-wrapper").style.display = "block";

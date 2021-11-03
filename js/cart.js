@@ -1,5 +1,9 @@
 var compras = [];
 let total = 0;
+var paises = [];
+let precioEnvio = 0;
+let tC;
+let tB;
 
 
 document.addEventListener("DOMContentLoaded", function(e){
@@ -16,10 +20,50 @@ document.addEventListener("DOMContentLoaded", function(e){
                 compras.articles[l].currency = "USD";
             }
           cargarCarrito()
+          precioEnvio = total * 0.05;
+          document.getElementById("productCostText").innerHTML = compras.articles[0].currency+"   "+ precioEnvio;
+          document.getElementById("totalCompras").innerHTML = "   "+compras.articles[0].currency+" "+ parseFloat(total + precioEnvio);
+     
         }
         
       }
     }); 
+
+    getJSONData(PAISES).then(function(resultObj){
+      if (resultObj.status === "ok")
+      {
+         paises = resultObj.data;
+         let paisesArray="";
+         for(let ñ=0;ñ<paises.countries.length;ñ++){
+            paisesArray += `<option value="`+ ñ +`">`+ paises.countries[ñ].name_es +`</option>`;
+         }
+
+         document.getElementById("paises").innerHTML += paisesArray;
+ 
+      }
+
+      //subtotal
+      
+      document.getElementById("comboEnvios").addEventListener("click", function(){
+        var envio1 = document.getElementById("envio1").checked;
+        var envio2 = document.getElementById("envio2").checked;
+        var envio3 = document.getElementById("envio3").checked;
+        if(envio1){
+          precioEnvio = total * 0.15;
+        }
+        else if(envio2){
+          precioEnvio = parseFloat((total * 0.07).toFixed(2));
+        }
+        else{
+          precioEnvio = total * 0.05;
+        }
+
+        document.getElementById("productCostText").innerHTML = compras.articles[0].currency+"   "+ precioEnvio;
+        document.getElementById("totalCompras").innerHTML = "   "+compras.articles[0].currency+" "+ parseFloat(total + precioEnvio);
+    });
+      
+    }); 
+
 
     document.getElementById("moneda").addEventListener("change", function(){
         let moneda = document.getElementById("moneda").value;
@@ -85,19 +129,29 @@ function cargarCarrito(){
     }
       
     llenarCarrito +=`
-    <tr>
-    
-    <td></td>
-    <td></td>
-    <td></td>
-    <th scope="row">Total:</th>
-    <td id="totalCompras">`+compras.articles[0].currency+" "+ total +`</td>
-    <td></td>
-    </tr>
     </tbody>
   </table>`;}
 
   document.getElementById("info-carrito").innerHTML = llenarCarrito;
+
+  let finalCompras =`
+              <ul class="list-group mb-3">
+                <li class="list-group-item d-flex justify-content-between lh-condensed fin">
+                  <div>
+                    <h6 class="my-0">Precio de Envio</h6>
+                    <small class="text-muted">En base a la compra</small>
+                  </div>
+                  <span class="text-muted" id="productCostText">-</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between bg-dark fin">
+                  <span class="">Total($):   </span>
+                  <strong id="totalCompras">    `+"   "+compras.articles[0].currency+" "+ parseFloat(total + precioEnvio) +`</strong>
+                </li>
+            </ul>`;
+
+document.getElementById("info-Final").innerHTML = finalCompras;
+document.getElementById("tarjetaCredito").style.display = "none";
+document.getElementById("targetaB").style.display = "none";
 }
 
 function actualizarPrecio(pos){
@@ -121,7 +175,43 @@ function eliminarLista(pos){
       document.getElementById("info-carrito").innerHTML =`<img id="nohaynada" src="img/Nada.gif" class="img-fluid" alt="Responsive image">
       <h2>NO HAY PRODUCTOS EN EL CARRITO</h2>`;
       document.getElementById("myaudio").src = "music/vacio.mp3";
+      document.getElementById("envioForm").style.display = "none";
+      document.getElementById("carritoFinal").style.display = "none";
+      document.getElementById("moneda").style.display = "none";
+     
     }
-    else{cargarCarrito();}
+    else{
+      precioEnvio =0;
+      cargarCarrito();}
     
 }
+
+function mostrarTarjetaC(){
+
+  document.getElementById("tarjetaCredito").style.display = "block";
+  document.getElementById("targetaB").style.display = "none";
+  tC = true;
+  tB = false;
+}
+
+function mostrarTarjetaB(){
+  document.getElementById("tarjetaCredito").style.display = "none";
+  document.getElementById("targetaB").style.display = "block";
+  tC = false;
+  tB = true;
+}
+
+document.getElementById('emailCompras').addEventListener('input', function() {
+  campo = event.target;
+  valido = document.getElementById('emailOK');
+      
+  emailRegex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
+  //Se muestra un texto a modo de ejemplo, luego va a ser un icono
+  if (emailRegex.test(campo.value)) {
+    valido.innerText = "Correo válido";
+    
+  } else {
+    valido.innerText = "     Correo incorrecto";
+  }
+  console.log(valido.innerText)
+});
