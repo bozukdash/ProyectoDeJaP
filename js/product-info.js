@@ -194,3 +194,23 @@ getJSONData(PRODUCTS_URL).then(function(resultObj){
     });
 });
 
+
+function aniadirACarrito(){
+  let esteAuto = {};
+
+  esteAuto = JSON.parse(localStorage.getItem("estaCompra"));
+  if(esteAuto){
+    esteAuto.count ++;
+    localStorage.setItem("estaCompra", JSON.stringify(esteAuto));
+  }
+  else{
+    esteAuto = {};
+    esteAuto.name = infoAuto.name;
+    esteAuto.count = 1;
+    esteAuto.unitCost =infoAuto.cost ;
+    esteAuto.currency = "USD";
+    esteAuto.src =infoAuto.images[0];
+
+    localStorage.setItem("estaCompra", JSON.stringify(esteAuto));
+  }
+}

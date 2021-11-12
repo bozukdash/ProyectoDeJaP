@@ -4,7 +4,7 @@ function verificarDatos() {
   let dato2 = document.getElementById("contra");
   let usuario = {};
   var isChecked = document.getElementById("recordar").checked;
-
+  localStorage.setItem("mostrarCategoria","Autos");
   if (isChecked) {//Recuerda el usuario
     localStorage.setItem("mostrarCategoria","Autos");
     if (dato.value.trim() === "" || dato2.value.trim() === "") {

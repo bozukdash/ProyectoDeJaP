@@ -117,6 +117,7 @@ form{
     border: 1px dashed blue;
     border-radius: 10px;
     border-width: 3px;
+    padding: 10px,10px,10px,10px;
 }
 
 #enviar{
@@ -132,3 +133,20 @@ form{
 #totalCompras{
     margin-left: 600px;
 }
+
+.invalida{
+    border-color: crimson;
+    border-width: 5px;
+}
+
+.valida{
+    border-color: rgb(80, 235, 80);
+    border-width: 5px;
+}
+
+#comprasTarjeta{
+    position: absolute;
+    margin-left: 320px;
+    margin-top: -70px;
+}
+
